@@ -117,7 +117,6 @@ const DashboardLayout = () => {
             />
           </div>
         </header>
-        ={" "}
         <div className="px-4 md:px-6">
           <Outlet />
         </div>

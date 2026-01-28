@@ -29,6 +29,28 @@ const CallTrendsChart = () => {
           </h3>
           <p className="text-sm text-[#90A1B9] font-medium">Total: 472 calls</p>
         </div>
+        <div>
+          <div className="dropdown dropdown-start">
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn m-1 bg-[#1D293D] border-none shadow-none text-[#FFFF]"
+            >
+              This Week ⬇
+            </div>
+            <ul
+              tabIndex="-1"
+              className="dropdown-content menu bg-[#1D293D] rounded-box z-1 w-32 p-2 shadow-sm"
+            >
+              <li>
+                <a>Item 1</a>
+              </li>
+              <li>
+                <a>Item 2</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
 
       <div className="w-full h-80">

@@ -90,10 +90,9 @@ const Dashboard = () => {
 
   const repairs = [
     { label: "Screen Repair", requests: 156, percentage: "75%" },
-    { label: "Battery Replacement", requests: 89, percentage: "45%" },
-    { label: "Back Glass Repair", requests: 67, percentage: "35%" },
-    { label: "Back Glass Repair", requests: 45, percentage: "25%" },
-    { label: "Software Issues", requests: 120, percentage: "100%" },
+    { label: "Battery Replacement", requests: 89, percentage: "55%" },
+    { label: "Back Glass Repair", requests: 67, percentage: "45%" },
+    { label: "Software Issues", requests: 45, percentage: "35%" },
   ];
 
   return (
@@ -118,7 +117,7 @@ const Dashboard = () => {
             {activities.map((item) => (
               <div
                 key={item.id}
-                className="bg-[#1E2746] p-4 rounded-xl flex items-start gap-4"
+                className="bg-[#1E2746] p-4 rounded-xl flex items-start gap-4 transition transform hover:scale-105"
               >
                 <div
                   className={`w-2.5 h-2.5 rounded-full mt-1.5 ${item.color}`}
