@@ -1,16 +1,35 @@
-# React + Vite
+# 🖥️ Dashboard Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A **modern, responsive React Dashboard** built with React and Tailwind CSS. This project includes dynamic routing, collapsible sidebar, call logs, appointments, and an adaptive header for mobile devices.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# 🛠 Technologies
 
-## React Compiler
+ - React.js
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+ - React Router v6
 
-## Expanding the ESLint configuration
+ - Tailwind CSS
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+ - React Icons
+
+ - JavaScript (ES6+)
+
+ - HTML5 & CSS3
+
+
+
+## 🌟 Features
+
+- Fully responsive sidebar with collapsible menu
+- Dynamic browser tab title based on current route
+- Call logs with detailed information and conversation transcript
+- Appointments management
+- Mobile-friendly adaptive header
+- Modern UI with gradient colors, badges, and shadows
+- Easy to extend and maintain
+
+
+# Github Repo: https://github.com/MdShariyar56/Dashboard
+
+# Live Link: https://dashboard-virid-ten-56.vercel.app/ 
