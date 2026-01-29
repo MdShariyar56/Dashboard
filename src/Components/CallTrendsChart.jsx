@@ -21,10 +21,10 @@ const data = [
 
 const CallTrendsChart = () => {
   return (
-    <div className="w-full bg-[#0F172B80] rounded-2xl shadow-sm border border-gray-100 p-6">
+    <div className="w-full bg-[#0F172B80] rounded-2xl shadow-sm border border-[#2B7FFF33] p-6">
       <div className="flex justify-between items-center mb-4">
         <div>
-          <h3 className="text-lg font-semibold text-white">
+          <h3 className="text-lg font-semibold text-[#FFFFFF]">
             Call Trends - This Week
           </h3>
           <p className="text-sm text-[#90A1B9] font-medium">Total: 472 calls</p>
@@ -34,20 +34,21 @@ const CallTrendsChart = () => {
             <div
               tabIndex={0}
               role="button"
-              className="btn m-1 bg-[#1D293D] border-none shadow-none text-[#FFFF]"
+              className="btn m-1 bg-[#1D293D] border border-[#2B7FFF33] shadow-none text-[#FFFFFF]"
             >
               This Week ⬇
             </div>
             <ul
               tabIndex="-1"
-              className="dropdown-content menu bg-[#1D293D] rounded-box z-1 w-32 p-2 shadow-sm"
+              className="dropdown-content menu bg-[#1D293D] rounded-box z-1 w-32 p-2 shadow-sm "
             >
-              <li>
-                <a>Item 1</a>
-              </li>
-              <li>
-                <a>Item 2</a>
-              </li>
+              <li>Monday</li>
+              <li>Tuesday</li>
+              <li>Wednesday</li>
+              <li>Thursday</li>
+              <li>Friday</li>
+              <li>Saturday</li>
+              <li></li>
             </ul>
           </div>
         </div>
@@ -75,13 +76,13 @@ const CallTrendsChart = () => {
               dataKey="day"
               axisLine={false}
               tickLine={false}
-              tick={{ fill: "#9CA3AF", fontSize: 12 }}
+              tick={{ fill: "#F8F8F8", fontSize: 12 }}
               dy={10}
             />
             <YAxis
               axisLine={false}
               tickLine={false}
-              tick={{ fill: "#9CA3AF", fontSize: 12 }}
+              tick={{ fill: "#F8F8F8", fontSize: 12 }}
               domain={[0, 100]}
               ticks={[0, 25, 50, 75, 100]}
             />
@@ -98,7 +99,7 @@ const CallTrendsChart = () => {
               stroke="#3B82F6"
               strokeWidth={2}
               fill="url(#callGradient)"
-              dot={{ r: 4, fill: "#3B82F6", stroke: "#fff", strokeWidth: 2 }}
+              dot={{ r: 4, fill: "#3B82F6", stroke: "#3B82F6", strokeWidth: 2 }}
               activeDot={{ r: 6, strokeWidth: 0 }}
             />
           </AreaChart>

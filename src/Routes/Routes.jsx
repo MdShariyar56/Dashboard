@@ -5,30 +5,28 @@ import Overview from "../Pages/Overview";
 import Settings from "../Pages/Settings";
 import Appointments from "../Pages/Appointments";
 
-
 export const router = createBrowserRouter([
-
-    {
-     path: "/",
-     element: <DashboardLayout />,
-     children:[
-        {
-            path: "/",
-            element: <Overview></Overview>
-        },
-        {
+  {
+    path: "/",
+    element: <DashboardLayout />,
+    hydrateFallbackElement: <div>Loading</div>,
+    children: [
+      {
+        path: "/",
+        element: <Overview></Overview>,
+      },
+      {
         path: "/Calls",
-        element: <CallLogs />
-        },
-        {
-            path: "/appointments",
-            element: <Appointments></Appointments>
-        },
-        {
-          path: "/Settings",
-          element: <Settings></Settings>
-        }
-     ]
-    },
-    
-])
+        element: <CallLogs />,
+      },
+      {
+        path: "/appointments",
+        element: <Appointments></Appointments>,
+      },
+      {
+        path: "/Settings",
+        element: <Settings></Settings>,
+      },
+    ],
+  },
+]);

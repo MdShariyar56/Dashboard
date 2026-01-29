@@ -24,7 +24,7 @@ const Dashboard = () => {
       title: "AI-Handled Calls",
       value: "98",
       trend: "+77%",
-      bgColor: "bg-[#F6339A]",
+      bgColor: "bg-gradient-to-r from-[#AD46FF] to-[#F6339A]",
       icon: <FaAirbnb size={24} />,
     },
     {
@@ -32,7 +32,7 @@ const Dashboard = () => {
       title: "Warm Transfer",
       value: "23",
       trend: "+18%",
-      bgColor: "bg-[#FB2C36]",
+      bgColor: "bg-gradient-to-r from-[#FF6900] to-[#FB2C36]",
       icon: <GoArrowSwitch size={24} />,
     },
     {
@@ -40,7 +40,7 @@ const Dashboard = () => {
       title: "Appointments Booked",
       value: "34",
       trend: "+8%",
-      bgColor: "bg-[#00BC7D]",
+      bgColor: "bg-gradient-to-r from-[#00C950] to-[#00BC7D]",
       icon: <CiCalendar size={24} />,
     },
     {
@@ -48,7 +48,7 @@ const Dashboard = () => {
       title: "Missed/Failed Calls",
       value: "6",
       trend: "-3%",
-      bgColor: "bg-[#FB2C36]",
+      bgColor: "bg-gradient-to-r from-[#FB2C36] to-[#FF2056]",
       icon: <TbXboxX size={24} />,
     },
     {
@@ -66,25 +66,25 @@ const Dashboard = () => {
       id: 1,
       text: "AI booked appointment for iPhone 13 screen repair",
       time: "2 min ago",
-      color: "bg-green-500",
+      color: "bg-[#05DF72]",
     },
     {
       id: 2,
       text: "Warm transfer to technician - Software Issue",
       time: "5 min ago",
-      color: "bg-orange-500",
+      color: "bg-[#FF8904]",
     },
     {
       id: 3,
       text: "Quote provided for iPad battery replacement",
       time: "8 min ago",
-      color: "bg-green-500",
+      color: "bg-[#05DF72]",
     },
     {
       id: 4,
       text: "Call dropped after 12 seconds",
       time: "15 min ago",
-      color: "bg-red-500",
+      color: "bg-[#FF6467]",
     },
   ];
 
@@ -96,8 +96,8 @@ const Dashboard = () => {
   ];
 
   return (
-    <div className="min-h-screen p-2 md:p-4 space-y-6">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+    <div className="min-h-screen p-2 md:p-6 bg-[#111B3C]  space-y-6 mb-6 ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 ">
         {stats.map((card) => (
           <StatCard
             key={card.id}
@@ -111,8 +111,10 @@ const Dashboard = () => {
       <CallTrendsChart />
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <div className="bg-[#161D31] rounded-2xl p-6 border border-gray-800">
-          <h2 className="text-xl font-semibold mb-6">Recent Activity</h2>
+        <div className="bg-[#161D31] rounded-2xl p-6 border border-[#2B7FFF33] ">
+          <h2 className="text-xl text-[#FFFFFF] font-semibold mb-6">
+            Recent Activity
+          </h2>
           <div className="space-y-4">
             {activities.map((item) => (
               <div
@@ -123,31 +125,33 @@ const Dashboard = () => {
                   className={`w-2.5 h-2.5 rounded-full mt-1.5 ${item.color}`}
                 ></div>
                 <div>
-                  <p className="text-gray-200 text-sm font-medium">
+                  <p className="text-[#FFFFFF] text-sm font-medium">
                     {item.text}
                   </p>
-                  <p className="text-gray-500 text-xs mt-1">{item.time}</p>
+                  <p className="text-[#7A8BA4] text-xs mt-1">{item.time}</p>
                 </div>
               </div>
             ))}
           </div>
         </div>
 
-        <div className="bg-[#161D31] rounded-2xl p-6 border border-gray-800 space-y-6">
-          <h2 className="text-xl font-semibold">Top Repair Requests</h2>
+        <div className="bg-[#161D31] rounded-2xl p-6 border border-[#2B7FFF33] space-y-6">
+          <h2 className="text-xl text-[#FFFFFF] font-semibold">
+            Top Repair Requests
+          </h2>
           {repairs.map((repair, index) => (
             <div key={index}>
               <div className="flex justify-between mb-2">
-                <span className="text-sm font-medium text-gray-300">
+                <span className="text-sm font-medium text-[#FFFFFF]">
                   {repair.label}
                 </span>
-                <span className="text-sm text-gray-500">
+                <span className="text-sm text-[#C0CCDD]">
                   {repair.requests} requests
                 </span>
               </div>
               <div className="w-full bg-[#1E2746] rounded-full h-2">
                 <div
-                  className="bg-blue-500 h-2 rounded-full transition-all duration-500"
+                  className="bg-gradient-to-r from-[#2B7FFF] to-[#00B8DB] h-2 rounded-full transition-all duration-500"
                   style={{ width: repair.percentage }}
                 ></div>
               </div>
@@ -166,10 +170,10 @@ const StatCard = ({ title, value, trend, icon, bgColor, active, onClick }) => (
       p-4 rounded-2xl border cursor-pointer
       flex flex-col justify-between
       transition transform hover:scale-105
-      ${active ? "border-yellow-500 ring-1 ring-yellow-500 bg-[#111827]" : `border-gray-800 bg-[#0f172a]`}
+      ${active ? "border-yellow-500 ring-1 ring-yellow-500 bg-[#111827]" : `border-[#2B7FFF33] bg-[#0f172a]`}
     `}
   >
-    <div className="flex justify-between items-start mb-4">
+    <div className="flex justify-between items-start mb-4 h-6 ">
       <p className="text-gray-400 text-sm md:text-base">{title}</p>
       <div
         className={`p-3 rounded-xl flex items-center justify-center ${bgColor} text-white text-lg md:text-xl`}
@@ -181,7 +185,7 @@ const StatCard = ({ title, value, trend, icon, bgColor, active, onClick }) => (
       {value}
     </div>
     <div
-      className={`text-xs md:text-sm font-medium ${trend.startsWith("+") ? "text-emerald-500" : "text-red-500"}`}
+      className={`text-xs md:text-sm font-medium ${trend.startsWith("+") ? "text-[#05DF72]" : "text-[#FD244A]"}`}
     >
       {trend}
     </div>

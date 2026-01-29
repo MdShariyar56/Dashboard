@@ -31,9 +31,9 @@ const Appointments = () => {
   const bookings = page === 1 ? bookingsPage1 : bookingsPage2;
 
   return (
-    <div className="min-h-screen text-slate-200 p-4 sm:p-6 md:p-8 font-sans">
+    <div className="min-h-screen bg-[#111B3C] p-2 md:p-0  font-sans">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 mb-6">
-        <div className="bg-[#111827] border border-slate-800 p-4 sm:p-6 h-36 rounded-xl shadow-lg">
+        <div className="bg-[#0F172B80] border border-[#2B7FFF33] p-4 sm:p-6 h-36 rounded-xl shadow-lg border-green-26">
           <div className="flex items-center gap-2 text-[#90A1B9] mb-1">
             <CiCalendar size={24} color="#51A2FF" />
             <span className="text-sm font-semibold uppercase tracking-wider">
@@ -41,10 +41,10 @@ const Appointments = () => {
             </span>
           </div>
           <div className="text-3xl sm:text-4xl font-semibold py-2">34</div>
-          <div className="text-green-500 text-sm mt-1">+8 this week</div>
+          <div className="text-[#05DF72] text-sm mt-1">+8 this week</div>
         </div>
 
-        <div className="bg-[#111827] border border-slate-800 p-4 sm:p-6 h-36 rounded-xl shadow-lg">
+        <div className="bg-[#0F172B80] border border-[#2B7FFF33] p-4 sm:p-6 h-36 rounded-xl shadow-lg">
           <div className="flex items-center gap-2 text-[#90A1B9] mb-1">
             <CiCircleCheck size={24} color="#05DF72" />
             <span className="text-sm font-semibold uppercase tracking-wider">
@@ -55,7 +55,7 @@ const Appointments = () => {
           <div className="text-slate-400 text-sm mt-1">82% of total</div>
         </div>
 
-        <div className="bg-[#111827] border border-slate-800 p-4 sm:p-6 h-36 rounded-xl shadow-lg">
+        <div className="bg-[#0F172B80] border border-[#2B7FFF33] p-4 sm:p-6 h-36 rounded-xl shadow-lg">
           <div className="flex items-center gap-2 text-[#90A1B9] mb-1">
             <RiErrorWarningLine size={24} color="#FDC700" />
             <span className="text-sm font-semibold uppercase tracking-wider">
@@ -69,25 +69,33 @@ const Appointments = () => {
         </div>
       </div>
 
-      <div className="bg-[#111827] border border-slate-800 p-4 sm:p-6 rounded-xl mb-6">
+      <div className="bg-gradient-to-r from-[#1A1A2E] to-[#16213E] border border-[#2B7FFF33] p-4 sm:p-6 rounded-xl mb-6">
         <p className="text-slate-400 mb-2 text-sm">Booking Link</p>
         <div className="flex flex-col sm:flex-row gap-2">
           <input
             type="text"
             value="https://techstore.com/book?id=store123"
             readOnly
-            className="input input-bordered w-full bg-[#0d121f] border-slate-700 text-slate-300 focus:outline-none"
+            className="input input-bordered w-full bg-[#0d121f] border-[#00FF8833] text-slate-300 focus:outline-none"
           />
-          <button className="btn btn-primary bg-[#152252] hover:bg-[#111B3C] border-none px-6 flex items-center justify-center">
+          <button
+            className="
+    btn btn-primary
+    bg-gradient-to-r from-[#111B3C] to-[#152252]
+    shadow-[inset_0_2px_10px_rgba(210,234,255,0.9)]
+    border-none px-6
+    flex items-center gap-2 justify-center
+  "
+          >
             <MdOutlineContentCopy size={26} />
             Copy Link
           </button>
         </div>
       </div>
-      <div className="overflow-x-auto bg-[#111827] border border-slate-800 rounded-xl">
+      <div className="overflow-x-auto bg-[#0F172B80] border border-[#2B7FFF33] rounded-xl">
         <table className="table w-full min-w-[700px] sm:min-w-full">
           <thead className="bg-[#111827]">
-            <tr className="border-b border-green-800 text-slate-400">
+            <tr className="border-b border-[#2B7FFF33] text-slate-400">
               <th>Client Name</th>
               <th>Client Phone</th>
               <th>Client Mail</th>
