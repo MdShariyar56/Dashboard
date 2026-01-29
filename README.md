@@ -33,3 +33,23 @@ A **modern, responsive React Dashboard** built with React and Tailwind CSS. This
 # Github Repo: https://github.com/MdShariyar56/Dashboard
 
 # Live Link: https://dashboard-virid-ten-56.vercel.app/ 
+
+
+## Run Instructions (Locally)
+
+Make sure you have **Node.js** installed.
+
+1. **Clone the repository:**
+```bash
+git clone https://github.com/MdShariyar56/Dashboard
+cd dashboard
+```
+
+2. **Install dependencies:**
+
+npm install
+
+3. **Start development server:**
+
+npm run build
+
